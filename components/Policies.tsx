@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function PoliciesSection() {
   return (
-    <section className="relative py-20 bg-gray-50 overflow-hidden">
+    <section className="relative py-20 bg-gray-50 overflow-hidden mb-0 pb-0">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-6 md:px-12 lg:px-20">
         {/* LEFT IMAGE */}
         <motion.div

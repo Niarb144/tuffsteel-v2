@@ -13,8 +13,7 @@ export default function Home() {
       <AboutSection />
       <StatsSection />
       <Policies />
-      <BlogSection />
-      <ContactForm />
+      <BlogSection />      
     </>
   );
 }
