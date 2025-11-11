@@ -14,15 +14,15 @@ export default function GallerySection() {
     "/images/img6.webp",
   ];
 
-  const [selectedIndex, setSelectedIndex] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const handleNext = () => {
-    setSelectedIndex((prev) => (prev + 1) % galleryImages.length);
+    setSelectedIndex((prev) => (prev !== null ? (prev + 1) % galleryImages.length : 0));
   };
 
   const handlePrev = () => {
     setSelectedIndex((prev) =>
-      prev === 0 ? galleryImages.length - 1 : prev - 1
+      prev === null || prev === 0 ? galleryImages.length - 1 : prev - 1
     );
   };
 
@@ -118,7 +118,3 @@ export default function GallerySection() {
     </section>
   );
 }
-import { once } from "events";
-import { scale, delay, animate } from "framer-motion";
-import { section, div, h2, map, button } from "framer-motion/client";
-import { exit } from "process";
