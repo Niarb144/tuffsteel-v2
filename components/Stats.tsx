@@ -5,11 +5,11 @@ import Link from "next/link";
 
 export default function StatsSection() {
   const stats = [
-    { id: 1, label: "In service", value: 15, prefix: "Over ", suffix: " yrs", color: "bg-green-400", size: 14  },
+    { id: 1, label: "In service", value: 15, prefix: "Over ", suffix: " yrs", color: "bg-green-400", size: 10  },
     { id: 2, label: "Products", value: 5, color: "bg-yellow-400", size: 8 },
-    { id: 3, label: "Employees", value: 1000, prefix: "Over ", color: "bg-blue-400", size: 20 },
-    { id: 4, label: "Annual Capacity", value: 5.6, suffix: " Million Metric Tons", color: "bg-green-300", size: 22 },
-    { id: 5, label: "Established", value: 2007, color: "bg-yellow-300", size: 16 },
+    { id: 3, label: "Employees", value: 1000, prefix: "Over ", color: "bg-blue-400", size: 9 },
+    { id: 4, label: "Annual Capacity", value: 5.6, suffix: " Million Metric Tons", color: "bg-green-300", size: 12 },
+    { id: 5, label: "Established", value: 2007, color: "bg-yellow-300", size: 7 },
   ];
 
   return (
@@ -61,14 +61,14 @@ export default function StatsSection() {
                 whileHover={{ scale: 1.15 }}
                 className={`flex flex-col items-center justify-center rounded-full ${stat.color} shadow-lg cursor-pointer`}
                 style={{
-                  width: `${stat.size}vw`,
-                  height: `${stat.size}vw`,
+                  width: `${stat.size}rem`,
+                  height: `${stat.size}rem`,
                   margin: '0.2vw', 
-                  minWidth: '120px',
-                  minHeight: '120px',
+                  // minWidth: '120px',
+                  // minHeight: '120px',
                 }}
               >
-                <span className="text-2xl md:text-3xl font-bold text-gray-800">
+                <span className="text-2xl md:text-3xl w-26 text-center font-bold text-gray-800">
                   <CountUp
                     end={stat.value}
                     duration={2}
