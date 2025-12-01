@@ -1,83 +1,95 @@
 "use client";
+import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import Image from "next/image";
 
-export default function BlogSection() {
-  const blogs = [
-    {
-      id: 1,
-      title: "Steel Innovations in 2025",
-      description: "Discover the latest advancements in steel manufacturing and sustainable construction materials.",
-      image: "/images/steel.webp", // replace with your images
-      link: "/blog/steel-innovations-2025",
-    },
-    {
-      id: 2,
-      title: "Building Strong Foundations",
-      description: "Learn about the best practices for steel-based construction projects across Africa.",
-      image: "/images/cement.webp",
-      link: "/blog/building-strong-foundations",
-    },
-    {
-      id: 3,
-      title: "Sustainability in Steel Industry",
-      description: "How Tuffsteel Limited is implementing eco-friendly processes and reducing environmental impact.",
-      image: "/images/img4.webp",
-      link: "/blog/sustainability-steel-industry",
-    },
-  ];
+// News Card Component
+interface NewsItem {
+  date: string;
+  title: string;
+  image: string;
+}
 
+const news: NewsItem[] = [
+  {
+    date: "Feb, 21, 2020",
+    title:
+      "From a smelly dumpsite to a relaxing public park: The alluring tale of Kibarani",
+    image: "/images/img18.jpg",
+  },
+  {
+    date: "Nov, 16, 2020",
+    title: "Umoja Rubber emerges top at Energy Management Awards",
+    image: "/images/img19.jpg",
+  },
+  {
+    date: "Sep, 11, 2020",
+    title: "THE DIFFERENT CLASSES OF CEMENT",
+    image: "/images/img20.jpg",
+  },
+];
+
+export default function NewsUpdates() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-blue-500">
-          Latest News & Updates
-        </h2>
+    <section className="w-full bg-[#e9e9e7] py-14 px-6">
+      <div className="max-w-7xl mx-auto w-full">
+        {/* Title Row */}
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-gray-700 font-semibold text-lg">
+            Latest News & Updates
+          </h2>
 
-        <div className="flex flex-col md:flex-row md:gap-6 gap-8">
-          {blogs.map((blog, i) => (
-            <motion.div
-              key={blog.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.2 }}
-              className="bg-gray-100 rounded-lg overflow-hidden shadow-lg flex-1 cursor-pointer hover:shadow-2xl transition-shadow"
-            >
-              <img
-                src={blog.image}
-                alt={blog.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">{blog.title}</h3>
-                <p className="text-gray-700 mb-4">{blog.description}</p>
-                <Link href={blog.link}>
-                  <motion.span
-                    whileHover={{ x: 5 }}
-                    className="text-blue-600 font-medium flex items-center gap-1"
-                  >
-                    Read More →
-                  </motion.span>
-                </Link>
-              </div>
-            </motion.div>
-          ))}
+          <button className="text-blue-600 flex items-center gap-2 font-medium hover:underline">
+            More News & Updates
+            <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-blue-600 text-white">
+              +
+            </span>
+          </button>
         </div>
 
-        {/* More News Button */}
-        <div className="mt-12 text-center">
-          <Link href="/blog">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 200 }}
-              className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 rounded-full font-medium shadow"
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {news.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.15, duration: 0.5 }}
+              className="bg-white rounded-2xl shadow-sm p-4 pb-6"
             >
-              More News & Updates
-            </motion.button>
-          </Link>
+              {/* Image */}
+              <div className="w-full h-48 rounded-xl overflow-hidden">
+                <Image
+                  src={item.image}
+                  width={600}
+                  height={400}
+                  alt="News"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Date Tag */}
+              <div className="flex items-center gap-0 mt-3">
+                <div className="w-8 h-6 bg-blue-600 rounded-bl-lg rounded-tl-lg" />
+                <span className="text-xs font-semibold bg-black/70 text-white px-2 py-1 rounded-br-lg rounded-tr-lg">
+                  {item.date}
+                </span>
+              </div>
+
+              {/* Title */}
+              <h3 className="text-gray-800 font-semibold text-sm mt-3 leading-snug">
+                {item.title}
+              </h3>
+
+              {/* Arrow Button */}
+              <button className="mt-4 w-10 h-10 flex items-center justify-center rounded-full bg-gray-400 hover:bg-gray-200 text-white cursor-pointer">
+                →
+              </button>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
   );
 }
+
