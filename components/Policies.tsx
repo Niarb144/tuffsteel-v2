@@ -17,7 +17,7 @@ export default function PoliciesSection() {
           <img
             src="/images/img9.webp" 
             alt="Policies"
-            className="w-full h-full object-cover rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105"
+            className="w-full h-90 object-cover rounded-tl-3xl shadow-lg transition-transform duration-500 hover:scale-105"
           />
         </motion.div>
 
@@ -31,10 +31,10 @@ export default function PoliciesSection() {
         >
           {/* Title Section */}
           <div>
-            <h3 className="text-blue-700 text-sm md:text-4xl uppercase font-semibold tracking-wider mb-2">
+            <h3 className="text-blue-600 text-sm md:text-1xl uppercase font-semibold tracking-wider mb-2">
               OUR POLICIES & COMMITMENT
             </h3>
-            <h2 className="text-3xl md:text-7xl text-blue-500 font-bold mb-1 mt-4">
+            <h2 className="text-3xl md:text-3xl text-blue-500 font-bold mb-1 mt-4">
               Safety, Health & Corporate Policy
             </h2>
           </div>
