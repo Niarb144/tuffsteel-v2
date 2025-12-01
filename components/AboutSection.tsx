@@ -17,7 +17,7 @@ export default function AboutSection() {
           <img
             src="/images/img5.webp" 
             alt="About Tuffsteel"
-            className="w-full h-full object-cover rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105"
+            className="w-full h-96 object-cover rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105"
           />
         </motion.div>
 
@@ -31,16 +31,16 @@ export default function AboutSection() {
         >
           {/* Title Section */}
           <div>
-            <h2 className="text-blue-700 text-sm md:text-4xl uppercase font-semibold tracking-wider mb-2">
+            <h2 className="text-blue-700 text-sm md:text-2xl uppercase font-semibold tracking-wider mb-2">
               About
             </h2>
-            <h3 className="text-3xl md:text-7xl text-blue-500 font-bold mb-1 mt-4">
+            <h3 className="text-3xl md:text-4xl text-blue-500 font-bold mb-1 mt-4">
               Tuffsteel Limited
             </h3>
           </div>
 
           {/* Content Grid */}
-          <div className="grid md:grid-cols-2 gap-6 bg-white rounded-2xl border border-blue-200 shadow-sm p-8 mt-4">
+          <div className="grid md:grid-cols-2 gap-6 bg-white rounded-tr-4xl rounded-br-4xl border border-blue-400 shadow-sm p-8 mt-4">
             {/* LEFT DESCRIPTION + BUTTON */}
             <div>
               <p className="text-gray-700 mb-6 leading-relaxed">
@@ -74,7 +74,7 @@ export default function AboutSection() {
             </div>
 
             {/* RIGHT ACHIEVEMENTS */}
-            <div className="border-l md:border-l border-t md:border-t-0 border-blue-200 pl-6 pt-6 md:pt-0">
+            <div className="border-l md:border-l border-t md:border-t-0 border-blue-400 pl-6 pt-6 md:pt-0">
               <h4 className="text-xl font-semibold text-blue-500 mb-3">
                 Our Achievements
               </h4>
