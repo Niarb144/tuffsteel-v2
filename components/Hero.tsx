@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/50"></div>
 
       {/* LEFT CONTENT (Text) */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -30,14 +30,14 @@ export default function Hero() {
         >
           Discover More
         </motion.button>
-      </motion.div>
+      </motion.div> */}
 
       {/* RIGHT SIDE FLOATING IMAGE */}
-      <div className="relative z-20 mt-10 md:mt-0">
+      <div className="absolute left-50 z-20 mt-10 md:mt-0 ">
         <motion.img
           src="/images/floating-cement.webp"
           alt="Floating Cement Bag"
-          className="w-60 md:w-200 drop-shadow-[0_8px_8px_rgba(0,0,0,0.4)]"
+          className="w-60 md:w-250 drop-shadow-[0_8px_8px_rgba(0,0,0,0.4)] md:mt-30"
           animate={{
             y: [0, -30, 0], 
             // rotate: [0, 2, 0], 

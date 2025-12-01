@@ -97,7 +97,7 @@ export default function Footer() {
         </div>
 
         {/* Partner Logo */}
-        <div className="flex flex-col items-center justify-center">
+        {/* <div className="flex flex-col items-center justify-center">
           <p className="text-sm mb-2">A member of the</p>
           <img
             src="/nyumba-logo.png"
@@ -105,7 +105,7 @@ export default function Footer() {
             className="w-28 grayscale hover:grayscale-0 transition"
           />
           <p className="text-xs mt-1 text-gray-400">Since 1958</p>
-        </div>
+        </div> */}
       </div>
 
       {/* Divider */}

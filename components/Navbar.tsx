@@ -81,7 +81,7 @@ export default function Navbar() {
         <Link href="/contact" className="hidden md:inline-block">
           <motion.button
             whileHover={{ scale: 1.1 }}
-            className="bg-blue-700 text-white px-4 py-2 rounded-full hover:bg-blue-800 transition-colors font-medium cursor-pointer"
+            className="bg-blue-700 text-white px-4 py-2 rounded-bl-full rounded-tl-full rounded-tr-full hover:bg-blue-800 transition-colors font-medium cursor-pointer"
           >
             Get a Quote
           </motion.button>
