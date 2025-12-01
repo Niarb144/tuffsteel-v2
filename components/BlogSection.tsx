@@ -32,7 +32,7 @@ const news: NewsItem[] = [
 export default function NewsUpdates() {
   return (
     <section className="w-full bg-[#e9e9e7] py-14 px-6">
-      <div className="max-w-7xl mx-auto w-full">
+      <div className="max-w-6xl mx-auto w-full">
         {/* Title Row */}
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-gray-700 font-semibold text-lg">

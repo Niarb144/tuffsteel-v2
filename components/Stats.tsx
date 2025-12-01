@@ -21,7 +21,7 @@ export default function NumbersHero() {
   ];
 
   return (
-    <section className="w-full bg-[#e9e6e0] py-8">
+    <section className="w-full py-8">
       <div className="max-w-6xl mx-auto px-6">
         <div className="bg-[#e9e6e0] rounded-[20px] p-10 shadow-sm h-[90vh]">
           <div className="flex flex-col md:flex-row items-start gap-8 h-full">
